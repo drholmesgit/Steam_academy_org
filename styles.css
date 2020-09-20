@@ -1,0 +1,518 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*nav*/
+.nav {
+  background-color: rgba(135, 135, 202, 0.9);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgb(162, 162, 214);
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  text-align: right;
+}
+
+.nav li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav li a:hover,
+.nav .menu-btn:hover {
+  background-color: #f4f4f4;
+  color: rgb(162, 162, 214);
+}
+
+.nav .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* menu */
+
+.nav .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.nav .menu-icon {
+  cursor: pointer;
+
+  float: right;
+  padding: 28px 15px;
+  position: relative;
+  user-select: none;
+}
+
+.nav .menu-icon .navbars {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background, 0.3s ease-out;
+  width: 18px;
+}
+
+.nav .menu-icon .navbars:before,
+.nav .menu-icon .navbars:after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.nav .menu-icon .navbars:before {
+  top: 5px;
+}
+
+.nav .menu-icon .navbars:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.nav .menu-btn {
+  display: none;
+}
+
+.nav .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navbars {
+  background: transparent;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navbars:before {
+  transform: rotate(-45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navbars:after {
+  transform: rotate(45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon:not(.steps) .navbars:before,
+.nav .menu-btn:checked ~ .menu-icon:not(.steps) .navbars:after {
+  top: 0;
+}
+/*end nav*/
+.logoArea {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+header {
+  padding: 10px;
+  height: 400px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.headerText {
+  position: relative;
+}
+
+.section {
+  font-size: 40px;
+  border: 1px black;
+  box-shadow: 5px 10px 12px black;
+  background-color: rgb(248, 248, 72);
+  height: 80px;
+  width: 600px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.section,
+h4 {
+  margin-left: auto;
+  margin-right: auto;
+}
+.text {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+p.text {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+#courses-ss {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+.subject-ss {
+  clear: left;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  padding: 5px;
+  margin: 5px;
+  width: auto;
+  float: left;
+}
+.subject-ss img {
+  width: 100px;
+  height: 100px;
+  padding-left: 20px;
+}
+.logo {
+  padding: 5px;
+  font-size: 1.6em;
+}
+.logo:hover {
+  color: #ffd900;
+  cursor: pointer;
+}
+.social ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.social ul a {
+  text-decoration: none;
+}
+footer {
+  background: linear-gradient(to bottom, #f9f9f9, rgb(173, 173, 224));
+  padding: 20px;
+}
+.footer-links a:hover {
+  color: #ffd900;
+  cursor: pointer;
+}
+.footer-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  font-family: "Syne", sans-serif;
+}
+.footer-content li {
+  line-height: 1.5em;
+  list-style: none;
+}
+.footer-img img {
+  width: 130px;
+  padding-top: 10px;
+}
+.contact ul li {
+  color: #000980;
+  list-style: none;
+}
+.footer-bottom {
+  font-family: "Syne", sans-serif;
+  text-align: center;
+  color: #ffd900;
+}
+
+.icon {
+  margin: 5px;
+  padding: 5px;
+  font-size: 1.6em;
+  color: rgb(173, 173, 224);
+}
+.icon:hover {
+  color: white;
+}
+.student {
+  margin: 0px;
+  padding: 0;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.intro {
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  margin: 50px;
+  justify-content: center;
+}
+p.intro {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+.introImage {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-image: url(./Steam\ Images/Background.png);
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  background-image: url(./Steam\ Images/background2.png);
+  background-size: 100%;
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container p {
+  flex: 1 0 70%;
+  padding: 10px 40px 12px 14px;
+  text-align: center;
+  margin: auto;
+}
+
+.container aside {
+  flex: 0 1 30%;
+}
+
+.container2 {
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.imageclass {
+  float: left;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+}
+.clear {
+  margin: 50px;
+  width: auto;
+  clear: both;
+  text-align: center;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  float: none;
+}
+.media {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 60px 20px 0 20px;
+}
+.column {
+  flex: 1 0 30%;
+  padding: 0 20px;
+}
+
+.card {
+  position: relative;
+  background: white;
+  box-shadow: 0 10px 16px 0px rgb(19, 8, 8);
+  border-radius: 4px;
+  padding: 20px 40px 70px 40px;
+  height: 80%;
+  text-align: center;
+  font-size: 30px;
+}
+.stars {
+  max-width: 120px;
+  left: 50%;
+  position: absolute;
+  bottom: -38px;
+  transform: translate(-50%);
+}
+
+.card p {
+  margin: 0;
+}
+
+h3 {
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  text-align: center;
+}
+.card2 {
+  position: relative;
+  background: white;
+  box-shadow: 0 10px 16px 0px rgb(19, 8, 8);
+  border-radius: 4px;
+  padding: 20px 40px 70px 40px;
+  height: 90%;
+  text-align: center;
+  font-size: 30px;
+}
+.card2 p {
+  margin: 0;
+}
+.calendar {
+  display: block;
+  text-align: center;
+}
+.containerV {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.responsive-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.Q {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./Steam\ Images/Background2.png);
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+}
+.logo {
+  padding: 5px;
+  font-size: 1.6em;
+}
+.logo:hover {
+  color: #ffd900;
+  cursor: pointer;
+}
+
+/* STAFF CONTENT*/
+.staff {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: auto;
+  text-align: center;
+}
+
+.staff .staff_member {
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 45px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;
+  position: relative;
+}
+
+.staff .staff_member h3 {
+  color: rgb(156, 192, 246);
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+.staff .staff_member p.role {
+  color: #ccc;
+  margin: 12px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.staff .staff_member .team_img {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.staff .staff_member .team_img img {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+/* LINK CONTENT-STAFF PAGE*/
+.news-content {
+  background-image: url(Steam\ Images/background3.png);
+  display: flex;
+  flex-flow: row wrap;
+  padding: 5% 0;
+
+  transition: all 200ms ease-in-out;
+}
+.news:hover {
+  color: rgba(20, 74, 155);
+  opacity: 0.5;
+  transition: 0s;
+}
+.news {
+  background-color: white;
+  color: #8e8b8b;
+  flex: 1;
+  padding: 1%;
+  text-align: center;
+}
